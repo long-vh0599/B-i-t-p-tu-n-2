@@ -1,0 +1,3 @@
+﻿  bt.cpp
+C:\Users\admin\source\repos\MangTuan2\MangTuan2\bt.cpp(17,16): warning C4018: '<': signed/unsigned mismatch
+  MangTuan2.vcxproj -> C:\Users\admin\source\repos\MangTuan2\Debug\MangTuan2.exe
