@@ -11,23 +11,20 @@
 using namespace std;
 
 // Kiem tra ten mien
-int Check(string str)
-{
+int Check(string str) {
 	int i;
-	for (i = 0; i < str.length(); i++)
-	{
+	for (i = 0; i < str.length(); i++) {
+		
 		if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z') || str[i] == '.' || str[i] == '_');
-		else
-		{
-			break;
-		}
+		
+		else break;
 	}
 	if (i == str.length()) return 1;
 	return 0;
 }
 
-int main()
-{
+int main() {
+	
 	string tmp;
 	cout << "Nhap ten mien: ";
 	cin >> tmp;
@@ -38,7 +35,6 @@ int main()
 		return 0;
 	}
 
-	// Khoi tao thu vien Winsock
 	WSADATA wsa;
 	WSAStartup(MAKEWORD(2, 2), &wsa);
 
@@ -47,8 +43,7 @@ int main()
 
 	const char* url = tmp.c_str();
 	int ret = getaddrinfo(url, "http", NULL, &info);
-	if (ret == 0)
-	{
+	if (ret == 0) {
 		memcpy(&addr, info->ai_addr, info->ai_addrlen);
 		cout << "Phan giai ten mien thanh cong" << endl;
 		cout << "Dia chi IP:" << inet_ntoa(addr.sin_addr) << endl;
